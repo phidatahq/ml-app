@@ -10,9 +10,6 @@ ENV PYTHONPATH="${HOME_DIR}:${PYTHONPATH}"
 RUN groupadd -g 61000 ${USER} \
   && useradd -g 61000 -u 61000 -ms /bin/bash -d ${HOME_DIR} ${USER}
 
-# Install build dependencies for duckdb
-RUN apt-get update && apt-get install -y build-essential
-
 COPY . ${HOME_DIR}
 # Update pip
 RUN pip install --upgrade pip
@@ -21,7 +18,7 @@ RUN pip install -r ${HOME_DIR}/requirements.txt
 # Install project for the `api` and `app` cli commands
 RUN pip install ${HOME_DIR}
 
-USER ${USER}
+# USER ${USER}
 WORKDIR ${HOME_DIR}
 
 COPY scripts /scripts
