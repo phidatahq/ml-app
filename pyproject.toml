@@ -22,7 +22,6 @@ dependencies = [
   # Libraries for data processing
   "pandas",
   "polars",
-  "duckdb",
   # Libraries for Api server
   "fastapi",
   "typer",
@@ -30,7 +29,6 @@ dependencies = [
   # Project Libraries
   "openai",
   "prophet",
-  "langchain",
   "streamlit",
   "scikit-learn",
   "streamlit-chat",
