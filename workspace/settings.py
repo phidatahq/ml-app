@@ -16,11 +16,13 @@ ws_settings = WorkspaceSettings(
     dev_app_enabled=True,
     dev_api_enabled=True,
     dev_jupyter_enabled=True,
+    # dev_redis_enabled=True,
     # -*- Production settings
     prd_env="prd",
     # -*- Production Apps
     prd_app_enabled=True,
     prd_api_enabled=True,
+    # prd_redis_enabled=True,
     # -*- AWS settings
     # Region for AWS resources
     aws_region="us-east-1",
@@ -39,8 +41,4 @@ ws_settings = WorkspaceSettings(
     # build_images=True,
     # Push images after building
     # push_images=True,
-    # Skip cache when building images
-    # skip_image_cache=False,
-    # Force pull images in FROM
-    # force_pull_images=False,
 )
