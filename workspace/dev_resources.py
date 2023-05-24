@@ -6,14 +6,14 @@ from phidata.app.redis.stack import RedisStack
 from phidata.docker.config import DockerConfig
 from phidata.docker.resource.image import DockerImage
 
-from workspace.dev.jupyter.lab import dev_jupyter_lab
+from workspace.jupyter.lab import dev_jupyter_lab
 from workspace.settings import ws_settings
 
 #
-# -*- Docker resources for the dev environment
+# -*- Resources for the Development Environment
 #
 
-# -*- Dev Image
+# -*- Development Image
 dev_image = DockerImage(
     name=f"{ws_settings.image_repo}/{ws_settings.ws_name}",
     tag=ws_settings.dev_env,
