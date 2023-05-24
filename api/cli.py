@@ -36,7 +36,7 @@ def start(
 
     logger.info("Starting Api")
     uvicorn.run(
-        "api.app:app",
+        "api.main:app",
         host=api_settings.host,
         port=api_settings.port,
         reload=reload,
